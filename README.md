@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/intro-component-with-signup-LbEm58UNdu)
+- Live Site URL: [live site URL here](https://gilangr1440.github.io/intro-component-with-signup/)
 
 ## My process
 
