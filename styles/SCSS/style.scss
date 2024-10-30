@@ -1,0 +1,296 @@
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+$blue: hsl(248, 32%, 49%);
+
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto auto;
+  background: url(../../images/bg-intro-mobile.png);
+  background-color: $red;
+
+  @at-root .toast-success {
+    background: $green;
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 6px 6px;
+    position: fixed;
+    top: -40px;
+    animation: toast 3s;
+  }
+
+  @keyframes toast {
+    0% {
+      top: -40px;
+      opacity: 0;
+    }
+    30% {
+      top: 0px;
+      opacity: 1;
+    }
+    70% {
+      top: 0px;
+      opacity: 1;
+    }
+    100% {
+      top: -40px;
+      opacity: 0;
+    }
+  }
+
+  @at-root .text-section {
+    text-align: center;
+    width: 85%;
+    color: white;
+    margin: 90px 0 60px;
+
+    @at-root .text-section__title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    @at-root .text-section__text {
+      margin: auto;
+      line-height: 1.5;
+    }
+  }
+
+  @at-root .form-section {
+    width: 85%;
+    max-width: 600px;
+    margin-bottom: 50px;
+    color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @at-root .form-section__try {
+      text-align: center;
+      padding: 20px 40px;
+      background: $blue;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.3), 0px 6px 0px 0px hsla(0, 100%, 74%, 0.8);
+      border-radius: 10px;
+
+      @at-root .form-section__try_bold {
+        font-weight: 600;
+      }
+    }
+
+    @at-root .form-section__cont {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 0px 0px hsla(0, 0%, 0%, 0.2);
+
+      @at-root .form-section__form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @at-root .form-section__list {
+          @at-root .form-section__form-cont {
+            padding: 15px;
+            border: 1px solid $grayish-blue;
+            border-radius: 6px;
+            display: flex;
+            margin-bottom: 8px;
+
+            @at-root .form-section__form-cont.error {
+              border: 1px solid $red;
+            }
+
+            @at-root .form-section__form-cont:has(> .form-section__field:focus) {
+              border: 1px solid black;
+            }
+
+            @at-root .form-section__form-cont.error:has(> .form-section__field:focus) {
+              border: 1px solid $red;
+            }
+
+            @at-root .form-section__field {
+              font-size: 1rem;
+              font-weight: 600;
+              color: $dark-blue;
+              font-family: "Poppins", sans-serif;
+              border: none;
+              flex-grow: 1;
+
+              @media only screen and (max-width: 370px) {
+                width: 60%;
+              }
+
+              @at-root .form-section__field:focus {
+                outline: none;
+              }
+            }
+
+            @at-root .form-section__error-cont {
+              width: 25px;
+              height: 25px;
+
+              @at-root .form-section__error {
+                display: none;
+              }
+            }
+          }
+
+          @at-root .form-section__message-cont {
+            width: 100%;
+            height: 13px;
+
+            @at-root .form-section__error-message {
+              color: $red;
+              font-style: italic;
+              font-size: 0.8rem;
+              text-align: end;
+              display: none;
+            }
+          }
+        }
+
+        @at-root .form-section__button {
+          border: none;
+          background: $green;
+          color: white;
+          font-family: "Poppins", sans-serif;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          font-weight: 500;
+          padding: 18px;
+          border-radius: 6px;
+          margin-bottom: 20px;
+          box-shadow: 0 5px 0 0 #4fad84;
+
+          @at-root .form-section__button:hover {
+            background: lighten($color: $green, $amount: 10%);
+            cursor: pointer;
+          }
+
+          @at-root .form-section__button:active {
+            background: lighten($color: $green, $amount: 15%);
+            box-shadow: 0 0 0 0 #4fad84;
+            transform: translateY(5px);
+          }
+        }
+      }
+
+      @at-root .form-section__agree {
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 1.7;
+        color: $grayish-blue;
+
+        @at-root .form-section__agree_red {
+          color: $red;
+          font-weight: 700;
+
+          @at-root .form-section__agree_red:hover {
+            cursor: pointer;
+            color: lighten($color: $red, $amount: 10%);
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    color: white;
+
+    p {
+      a {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    width: 90vw;
+    margin: auto;
+    grid-template-rows: 95% 5%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "text form" "footer footer";
+    align-items: center;
+    background: url(../../images/bg-intro-desktop.png);
+    background-color: $red;
+
+    @at-root .toast-success {
+      display: none;
+      justify-content: start;
+      padding-left: 30px;
+      animation: toast 3s;
+      width: 400px;
+      height: 60px;
+      border-radius: 8px;
+      top: auto;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    @keyframes toast {
+      0% {
+        right: -420px;
+      }
+      30% {
+        right: 20px;
+      }
+      70% {
+        right: 20px;
+        opacity: 1;
+      }
+      100% {
+        right: -420px;
+        opacity: 0;
+      }
+    }
+
+    @at-root .text-section {
+      grid-area: text;
+      text-align: start;
+      margin: 0;
+      width: 80%;
+
+      @at-root .text-section__title {
+        font-size: 3rem;
+        margin-bottom: 30px;
+      }
+
+      @at-root .text-section__text {
+        line-height: 1.7;
+      }
+    }
+
+    @at-root .form-section {
+      grid-area: form;
+      margin: 0;
+
+      @media only screen and (max-height: 700px) {
+        transform: scale(0.7);
+      }
+
+      @at-root .form-section__cont {
+        padding: 40px;
+      }
+    }
+
+    footer {
+      grid-area: footer;
+    }
+  }
+}

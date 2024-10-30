@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/CSS/css-reset.css" />
+    <link rel="stylesheet" href="styles/CSS/style.css" />
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toast-success">Sucess</div>
+
+    <section class="text-section">
+      <h1 class="text-section__title">
+        Learn to code by <br />
+        watching others
+      </h1>
+      <p class="text-section__text">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </section>
+
+    <section class="form-section">
+      <div class="form-section__try"><span class="form-section__try_bold">Try it free 7 days</span> then $20/mo. thereafter</div>
+      <div class="form-section__cont">
+        <form class="form-section__form">
+          <div class="form-section__list">
+            <div class="form-section__form-cont">
+              <input type="text" class="form-section__field" id="firstName" placeholder="First Name" autocomplete="off" />
+              <div class="form-section__error-cont">
+                <img src="images/icon-error.svg" alt="error" class="form-section__error" />
+              </div>
+            </div>
+            <div class="form-section__message-cont">
+              <p class="form-section__error-message">First Name cannot be empty</p>
+            </div>
+          </div>
+          <div class="form-section__list">
+            <div class="form-section__form-cont">
+              <input type="text" class="form-section__field" id="lastName" placeholder="Last Name" autocomplete="off" />
+              <div class="form-section__error-cont">
+                <img src="images/icon-error.svg" alt="error" class="form-section__error" />
+              </div>
+            </div>
+            <div class="form-section__message-cont">
+              <p class="form-section__error-message">Last Name cannot be empty</p>
+            </div>
+          </div>
+          <div class="form-section__list">
+            <div class="form-section__form-cont">
+              <input type="email" class="form-section__field" id="email" placeholder="Email Address" autocomplete="off" />
+              <div class="form-section__error-cont">
+                <img src="images/icon-error.svg" alt="error" class="form-section__error" />
+              </div>
+            </div>
+            <div class="form-section__message-cont">
+              <p class="form-section__error-message">Email cannot be empty</p>
+            </div>
+          </div>
+          <div class="form-section__list">
+            <div class="form-section__form-cont">
+              <input type="password" class="form-section__field" id="password" placeholder="Password" />
+              <div class="form-section__error-cont">
+                <img src="images/icon-error.svg" alt="error" class="form-section__error" />
+              </div>
+            </div>
+            <div class="form-section__message-cont">
+              <p class="form-section__error-message">Password cannot be empty</p>
+            </div>
+          </div>
+          <button type="button" class="form-section__button">Claim your free trial</button>
+        </form>
+        <p class="form-section__agree">By clicking the button, you are agreeing to our <span class="form-section__agree_red">Terms and Services</span></p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/gilangr1440/">Gilang Ramadhan</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
